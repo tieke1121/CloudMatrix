@@ -1,0 +1,16 @@
+{
+  "run_id": "run-20261108-123600-t17",
+  "commit": "none",
+  "started_at_utc": "2026-11-08T04:34:00Z",
+  "ended_at_utc": "2026-11-08T04:36:00Z",
+  "os_build": "Windows 11 Home 10.0.26200",
+  "cpu_model": "AMD Ryzen 5 5600H with Radeon Graphics",
+  "cpu_cores_logical": 12,
+  "cpu_cores_physical": 6,
+  "ram_total_gb": 15.36,
+  "ram_available_gb": 2.45,
+  "gpu_name": "AMD Radeon(TM) Graphics",
+  "rpc_protocol_version": "v1.0",
+  "host_agent_binary": "build/bin/cloudmatrix-host.exe",
+  "measurement_tool": "go test / go build / scripts/check.ps1"
+}

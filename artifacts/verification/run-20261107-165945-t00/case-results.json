@@ -1,0 +1,34 @@
+[
+  {
+    "case_id": "V00-emulator-path-check",
+    "task_id": "T00",
+    "status": "BLOCKED",
+    "expected": "核实模拟器真实安装路径与可执行文件存在",
+    "actual": "注册表存在 MuMuPlayerGlobal 记录但目标路径 D:\\Program Files\\Netease\\MuMuPlayer 目录不存在",
+    "evidence_paths": [
+      "artifacts/verification/run-20261107-165945-t00/commands.log"
+    ],
+    "exit_code": 1,
+    "failure_reason": "模拟器主程序文件不存在，可能已被移动或删除，无法执行 CLI 帮助与探测"
+  },
+  {
+    "case_id": "V00-cli-discover-test",
+    "task_id": "T00",
+    "status": "BLOCKED",
+    "expected": "获取固定版本 CLI 帮助与实例列表原始输出",
+    "actual": "无法找到 CLI 可执行文件",
+    "evidence_paths": [],
+    "exit_code": null,
+    "failure_reason": "缺少可运行的模拟器 CLI 可执行文件"
+  },
+  {
+    "case_id": "V00-lifecycle-start-stop",
+    "task_id": "T00",
+    "status": "BLOCKED",
+    "expected": "用户显式指定隔离测试实例并验证启停生命周期",
+    "actual": "尚未指定测试实例且无可用模拟器引擎",
+    "evidence_paths": [],
+    "exit_code": null,
+    "failure_reason": "用户未指定隔离测试实例，依 AGENTS.md 规定标记 BLOCKED"
+  }
+]

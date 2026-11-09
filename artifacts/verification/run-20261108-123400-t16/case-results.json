@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "V16-credential-redaction",
+    "task_id": "T16",
+    "status": "PASS",
+    "expected": "密码完全掩码为 ******，用户名脱敏，端点格式化串与日志中绝无明文密码",
+    "actual": "TestCredentialRedactionAndSanitize 验证通过",
+    "evidence_paths": ["internal/network/credential.go", "internal/network/network_test.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V16-circuit-breaker-fail-closed",
+    "task_id": "T16",
+    "status": "PASS",
+    "expected": "连续 2 次探测失败自动触发 StatusBlocked 阻断，连续 2 次成功恢复",
+    "actual": "TestCircuitBreakerFailClosed 状态转换验证成功",
+    "evidence_paths": ["internal/network/health.go", "internal/network/network_test.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V16-adb-command-safe-array",
+    "task_id": "T16",
+    "status": "PASS",
+    "expected": "生成固定参数数组控制 Android 代理与禁用 IPv6，杜绝 Shell 字符串拼接",
+    "actual": "TestIsolationManagerLifecycleAndAdbCommands 验证参数切片结构正确",
+    "evidence_paths": ["internal/network/isolation.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V16-two-instances-isolation",
+    "task_id": "T16",
+    "status": "PASS",
+    "expected": "多实例网络配置与状态隔离，单实例代理失效时仅该实例触发 Fail-Closed，其他实例不受影响",
+    "actual": "TestTwoInstancesNetworkIsolationAndFailClosed 集成测试验证成功",
+    "evidence_paths": ["tests/integration/network/isolation_test.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "run_id": "run-20261108-123200-t13",
+  "commit": "none",
+  "started_at_utc": "2026-11-08T04:26:00Z",
+  "ended_at_utc": "2026-11-08T04:32:00Z",
+  "os_build": "Windows 11 Home 10.0.26200",
+  "cpu_model": "AMD Ryzen 5 5600H with Radeon Graphics",
+  "cpu_cores_logical": 12,
+  "cpu_cores_physical": 6,
+  "ram_total_gb": 15.36,
+  "ram_available_gb": 2.45,
+  "gpu_name": "AMD Radeon(TM) Graphics",
+  "display_size": "1920x1080",
+  "instances_tested": 4,
+  "stream_wall_mode": "canvas_webcodecs_adaptive",
+  "measurement_tool": "go test / vitest / scripts/check.ps1"
+}

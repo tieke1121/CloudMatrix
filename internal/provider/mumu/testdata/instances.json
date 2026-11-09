@@ -1,0 +1,28 @@
+[
+  {
+    "index": 0,
+    "name": "MuMuPlayer-0",
+    "running": true,
+    "adb_port": 16384,
+    "serial": "127.0.0.1:16384"
+  },
+  {
+    "index": 1,
+    "name": "MuMuPlayer-1",
+    "running": 0,
+    "adb_port": 16416,
+    "serial": ""
+  },
+  {
+    "index": 0,
+    "name": "Duplicate-MuMu-0",
+    "running": false,
+    "adb_port": 16384
+  },
+  {
+    "index": 2,
+    "name": "",
+    "running": "1",
+    "adb_port": "16448"
+  }
+]

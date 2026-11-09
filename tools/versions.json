@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-08T01:13:00+08:00",
+  "tools": {
+    "go": {
+      "version": "1.23.12",
+      "source": "https://golang.google.cn/dl/go1.23.12.windows-amd64.zip",
+      "sha256": "07c35866cdd864b81bb6f1cfbf25ac7f87ddc3a976ede1bf5112acbb12dfe6dc",
+      "install_path": "D:\\soft\\go\\bin\\go.exe",
+      "cgo_enabled": 0
+    },
+    "wails": {
+      "version": "v2.9.2",
+      "package": "github.com/wailsapp/wails/v2/cmd/wails@v2.9.2",
+      "min_go_version": "1.20"
+    },
+    "node": {
+      "version": "v22.23.4",
+      "npm_version": "10.9.9",
+      "path": "C:\\nvm4w\\nodejs\\node.exe"
+    },
+    "webview2": {
+      "version": "157.0.4341.42",
+      "source": "Windows Edge Runtime"
+    },
+    "adb": {
+      "version": "35.0.2",
+      "source": "https://dl.google.com/android/repository/platform-tools-latest-windows.zip",
+      "expected_dir": "D:\\soft\\platform-tools"
+    },
+    "scrcpy": {
+      "version": "3.1",
+      "source": "https://github.com/Genymobile/scrcpy/releases/download/v3.1/scrcpy-win64-v3.1.zip",
+      "expected_dir": "D:\\soft\\scrcpy"
+    },
+    "sqlite_driver": {
+      "package": "modernc.org/sqlite",
+      "cgo_required": false,
+      "notes": "纯 Go 驱动，规避 Windows 环境下 CGO gcc/mingw 编译依赖"
+    }
+  }
+}

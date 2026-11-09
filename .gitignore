@@ -1,0 +1,33 @@
+# Local data and caches
+.tmp/
+data/
+*.db
+*.db-shm
+*.db-wal
+*.log
+!artifacts/verification/run-20261109-143336-good-doctor/commands.log
+
+# Frontend dependencies and generated output
+frontend/node_modules/
+frontend/dist/
+coverage/
+
+# Build products
+build/
+*.exe
+!testdata/child/child.exe
+*.apk
+*.apks
+*.xapk
+
+# Local editor and machine-specific helpers
+.vscode/
+.idea/
+install_phone_driver.ps1
+install_phone_driver.bat
+tools/driver/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example

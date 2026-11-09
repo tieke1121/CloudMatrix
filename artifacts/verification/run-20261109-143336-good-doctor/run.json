@@ -1,0 +1,13 @@
+{
+  "run_id": "run-20261109-143336-good-doctor",
+  "commit": "none_before_initial_commit",
+  "started_at_utc": "2026-11-09T14:05:00Z",
+  "ended_at_utc": "2026-11-09T14:33:36Z",
+  "scope": "Good Doctor APK validation, install confirmation, launch/stop, and user-confirmed SMS login state",
+  "release_package_dir": "build/releases/20261109-144031-9bb123df",
+  "real_emulator_used": false,
+  "real_apk_install": "NOT_RUN",
+  "real_sms_login": "NOT_RUN",
+  "aapt2_runtime_check": "NOT_FOUND",
+  "notes": "No existing emulator was started, stopped, reset, deleted, or modified. Camera, location, SMS interception, and credential persistence are out of scope."
+}

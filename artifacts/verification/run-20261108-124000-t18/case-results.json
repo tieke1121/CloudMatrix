@@ -1,0 +1,52 @@
+[
+  {
+    "case_id": "V18-third-party-license-inventory",
+    "task_id": "T18",
+    "status": "PASS",
+    "expected": "清点第三方依赖开源许可证，严禁捆绑或再分发商业模拟器专有安装包/镜像",
+    "actual": "licenses/THIRD-PARTY-LICENSES.md 清单完备合规",
+    "evidence_paths": ["licenses/THIRD-PARTY-LICENSES.md"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V18-database-backup-and-rollback",
+    "task_id": "T18",
+    "status": "PASS",
+    "expected": "升级前自动生成冷备份快照，异常发生时原子还原到基线状态",
+    "actual": "TestUpgradeAndBackupWorkflow 集成测试验证成功",
+    "evidence_paths": ["internal/store/backup.go", "tests/integration/upgrade/upgrade_test.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V18-higher-version-db-protection",
+    "task_id": "T18",
+    "status": "PASS",
+    "expected": "低版本程序检测到高版本库时报错拒绝写入，保护数据一致性",
+    "actual": "TestHigherVersionSchemaRejection 验证触发 ErrDatabaseVersionTooHigh",
+    "evidence_paths": ["internal/store/migrate.go", "tests/integration/upgrade/upgrade_test.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V18-release-package-sha256-manifest",
+    "task_id": "T18",
+    "status": "PASS",
+    "expected": "自动生成发行包与 manifest.json，逐文件 SHA256 校验匹配",
+    "actual": "scripts/package.ps1 与 scripts/verify-release.ps1 验证通过",
+    "evidence_paths": ["build/release/manifest.json", "scripts/verify-release.ps1"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V18-uninstall-data-retention",
+    "task_id": "T18",
+    "status": "PASS",
+    "expected": "卸载脚本默认仅移除程序组件，完整保留用户实例与数据",
+    "actual": "uninstall.ps1 包含数据保留逻辑与显式确认机制",
+    "evidence_paths": ["build/release/uninstall.ps1"],
+    "exit_code": 0,
+    "failure_reason": null
+  }
+]

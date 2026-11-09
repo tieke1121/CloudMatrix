@@ -1,0 +1,53 @@
+[
+  {
+    "case_id": "go-production",
+    "status": "PASS",
+    "exit_code": 0,
+    "command": "go test -tags production ./... -count=1",
+    "scope": "Go tests; no real emulator"
+  },
+  {
+    "case_id": "go-vet-production",
+    "status": "PASS",
+    "exit_code": 0,
+    "command": "go vet -tags production ./..."
+  },
+  {
+    "case_id": "vue-tests",
+    "status": "PASS",
+    "exit_code": 0,
+    "command": "npm --prefix frontend run test:unit -- --pool=threads --poolOptions.threads.singleThread",
+    "actual": "9 tests passed"
+  },
+  {
+    "case_id": "production-package",
+    "status": "PASS",
+    "exit_code": 0,
+    "command": "scripts/package.ps1 -ReleaseDir build/releases/cloudmatrix-mw9bk5ft",
+    "actual": "TypeScript and Vite build; both Windows binaries; desktop build metadata -tags=production; 7 SHA256 entries, no extra files"
+  },
+  {
+    "case_id": "installer-file-ownership",
+    "status": "PASS",
+    "exit_code": 0,
+    "actual": "Temporary install/reinstall/uninstall preserved a synthetic database; verifier rejected extra DB; installer/uninstaller rejected modified executable"
+  },
+  {
+    "case_id": "adb-preflight-fixtures",
+    "status": "PASS",
+    "exit_code": 0,
+    "actual": "Exact fixture serial exit 0; wrong serial and ADB exit 7 rejected with exit 1; full integration marked NOT_RUN with exit 2"
+  },
+  {
+    "case_id": "real-emulator-desktop-flow",
+    "status": "NOT_RUN",
+    "exit_code": null,
+    "actual": "No explicitly designated isolated simulator with verified MuMu CLI used"
+  },
+  {
+    "case_id": "remote-host-and-advanced-capabilities",
+    "status": "NOT_RUN",
+    "exit_code": null,
+    "actual": "Host Agent is local health-check only. No target host, video-wall, network isolation or capacity acceptance performed"
+  }
+]

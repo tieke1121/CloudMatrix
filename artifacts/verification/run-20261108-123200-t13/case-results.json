@@ -1,0 +1,52 @@
+[
+  {
+    "case_id": "V13-header-parsing-and-protection",
+    "task_id": "T13",
+    "status": "PASS",
+    "expected": "正确解析 76 字节头部，对 0 尺寸和超过 10MB 畸形包实施防御性拦截",
+    "actual": "TestParseHeaderValidAndInvalid 与 TestReadPacketAndKeyframeDetection 均验证成功",
+    "evidence_paths": ["internal/media/media_test.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V13-keyframe-backpressure-dropping",
+    "task_id": "T13",
+    "status": "PASS",
+    "expected": "通道满载发生背压时，优先丢弃非关键帧，关键帧优先推送",
+    "actual": "TestPipelineBackpressureDropping 验证关键帧挤占成功，非关键帧丢弃计数递增",
+    "evidence_paths": ["internal/media/pipeline.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V13-multi-stream-adaptive-fps",
+    "task_id": "T13",
+    "status": "PASS",
+    "expected": "10路流并发时自适应降频至 5 FPS，后台节流模式下固定为 3 FPS",
+    "actual": "TestVideoWallManagerMultiStream 验证自适应重平衡与 SetBackgroundThrottled 成功",
+    "evidence_paths": ["internal/media/manager.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V13-media-pipeline-4ways-perf",
+    "task_id": "T13",
+    "status": "PASS",
+    "expected": "4路并发流吞吐处理正常，背压丢帧占比符合预期，无死锁且内存分配可控",
+    "actual": "TestMediaPipeline4WaysPerf 实测 800 帧处理完毕，背压丢帧率 94.5%，内存增量 3.4MB",
+    "evidence_paths": ["tests/performance/media/benchmark_test.go"],
+    "exit_code": 0,
+    "failure_reason": null
+  },
+  {
+    "case_id": "V13-frontend-video-tile",
+    "task_id": "T13",
+    "status": "PASS",
+    "expected": "前端卡片支持离线状态提示、实时 FPS、丢包统计与原生聚焦操作",
+    "actual": "VideoTile.test.ts 3 项测试全部通过",
+    "evidence_paths": ["frontend/src/components/VideoTile.vue", "frontend/src/components/VideoTile.test.ts"],
+    "exit_code": 0,
+    "failure_reason": null
+  }
+]

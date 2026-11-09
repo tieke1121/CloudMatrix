@@ -1,0 +1,9 @@
+[2026-11-09T14:21:00Z] go test ./internal/task ./internal/adb ./internal/store ./internal/app -> ExitCode: 0
+[2026-11-09T14:25:00Z] go test -tags production ./... -> ExitCode: 0
+[2026-11-09T14:26:00Z] go vet -tags production ./... -> ExitCode: 0
+[2026-11-09T14:27:00Z] npm run typecheck -> ExitCode: 0
+[2026-11-09T14:39:00Z] npm run test:unit -- --pool=threads --poolOptions.threads.singleThread=true -> ExitCode: 0 (6 files, 11 tests)
+[2026-11-09T14:27:00Z] npm run build -> ExitCode: 0 (chunk-size warning only)
+[2026-11-09T14:40:00Z] scripts/package.ps1 -> ExitCode: 0
+[2026-11-09T14:40:00Z] scripts/verify-release.ps1 -> ExitCode: 0 (7 files, no extras)
+[2026-11-09T14:33:00Z] real emulator install/login validation -> NOT_RUN (no isolated test instance or aapt2 available)
